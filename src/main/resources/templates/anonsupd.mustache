@@ -1,0 +1,15 @@
+<html xmlns:form="http://www.w3.org/1999/html">
+
+<body>
+
+<div>
+    <form method="post" action="upd">
+        {{#anonses}}
+        <input type="text" name="text" value="{{text}}" width="600px">
+<input type="hidden" name="anonsid" value="{{anonsid}}">
+        {{/anonses}}
+        <input type="submit">
+    </form>
+</div>
+</body>
+</html>

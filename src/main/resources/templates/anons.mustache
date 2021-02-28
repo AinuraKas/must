@@ -1,0 +1,42 @@
+<html xmlns:form="http://www.w3.org/1999/html">
+
+<body>
+
+<div>
+<form method="post">
+    <input type="text" name="id">
+    <input type="text" name="text">
+    <select name="regns" >
+        {{#regns}}
+        <option  value="{{regnsid}}">{{regns}}
+        {{/regns}}
+    </select>
+    <input type="submit">
+</form>
+    <br/>
+    <form method="post" action="flt">
+        <input type="text" name="fr">
+
+        <input type="submit">
+    </form>
+Список
+
+<div>
+{{#anonses}}
+<b>{{anonsid}}|{{text}}|{{anonsdend}}</b><br/>
+{{/anonses}}
+</div>
+    update from
+    <form method="get" action="anonsupd">
+        <select name="anonsupd" >
+            {{#anonses}}
+            <option  value="{{anonsid}}">{{text}}
+            {{/anonses}}
+        </select>
+        <input type="submit">
+
+    </form>
+
+</div>
+</body>
+</html>
